@@ -1,0 +1,40 @@
+<mat-toolbar  fxLayout="row" color="primary">
+  <mat-toolbar-row>
+  <span fxFlex> <a routerLink="">HiTeacher!</a></span>   
+    <button mat-button fxHide.xs>
+      <nav>
+        <a routerLink="/elementsequences/niveau/sixieme" routerLinkActive="active">Séquences 6eme</a>
+        <a routerLink="/elementsequences/niveau/cinquieme" routerLinkActive="active">Séquences 5eme</a>
+        <a routerLink="/elementsequences/niveau/quatrieme" routerLinkActive="active">Séquences 4eme</a>
+        <a routerLink="/elementsequences/niveau/troisieme" routerLinkActive="active">Séquences 3eme</a>
+        <a routerLink="/elementsequences/niveau/segpa" routerLinkActive="active">SEGPA</a>
+        <a routerLink="/elementsequences/niveau/escapegame" routerLinkActive="active">Escape Game/Genially</a>
+        <button class="teacher_button" (click)="onContinue()">🔒 Teacher's space</button>
+      </nav>
+    </button>
+    <button mat-icon-button [matMenuTriggerFor]="dropMenu" fxHide fxShow.xs>
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #dropMenu="matMenu">
+      <nav class="hide_menu">
+        <a routerLink="/elementsequences/niveau/sixieme" routerLinkActive="active">Séquences 6eme</a>
+        <a routerLink="/elementsequences/niveau/cinquieme" routerLinkActive="active">Séquences 5eme</a>
+        <a routerLink="/elementsequences/niveau/quatrieme" routerLinkActive="active">Séquences 4eme</a>
+        <a routerLink="/elementsequences/niveau/troisieme" routerLinkActive="active">Séquences 3eme</a>
+        <a routerLink="/elementsequences/niveau/segpa" routerLinkActive="active">SEGPA</a>
+        <a routerLink="/elementsequences/niveau/escapegame" routerLinkActive="active">Escape Game/Genially</a>
+        <button class="teacher_button" (click)="onContinue()">🔒 Teacher's space</button>
+      </nav>
+    </mat-menu>
+    <!-- <nav>
+      <a routerLink="/elementsequences/niveau/sixieme" routerLinkActive="active">Séquences 6eme</a>
+      <a routerLink="/elementsequences/niveau/cinquieme" routerLinkActive="active">Séquences 5eme</a>
+      <a routerLink="/elementsequences/niveau/quatrieme" routerLinkActive="active">Séquences 4eme</a>
+      <a routerLink="/elementsequences/niveau/troisieme" routerLinkActive="active">Séquences 3eme</a>
+      <a routerLink="/elementsequences/niveau/segpa" routerLinkActive="active">SEGPA</a>
+      <a routerLink="/elementsequences/niveau/escapegame" routerLinkActive="active">Escape Game/Genially</a>
+      <button (click)="onContinue()">🔒 Teacher's space</button>
+    </nav> -->
+    
+  </mat-toolbar-row>
+  </mat-toolbar>

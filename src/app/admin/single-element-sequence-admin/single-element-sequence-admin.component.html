@@ -1,0 +1,20 @@
+<form (ngSubmit)="updateElement()">
+  <h2> Titre </h2>
+  <input [(ngModel)]="elementSequence.title" name="title" [placeholder]="elementSequence.title">
+  <h2> Lien </h2>
+  <input [(ngModel)]="elementSequence.lien" name="lien" [placeholder]="elementSequence.lien">
+  <h2> URL de l'image </h2>
+  <input [(ngModel)]="elementSequence.imageUrl" name="imageUrl" [placeholder]="elementSequence.imageUrl">
+  <!-- Ajoutez d'autres champs ici -->
+  <button type="submit">Mettre à jour</button>
+  <button routerLink="/admin" routerLinkActive="active">Retour</button>
+</form>
+
+
+<div class="face-snap-card">
+  <h1> Preview </h1>
+  <h2>{{ elementSequence.title | uppercase }}</h2>
+  <p>Mis en ligne {{ elementSequence.createdDate | date: 'd MMMM yyyy' }}</p>
+    <img [src]="elementSequence.imageUrl" [alt]="elementSequence.title">
+    <a [href]="elementSequence.lien" target="_blank">{{ elementSequence.lien }}</a>
+  </div>

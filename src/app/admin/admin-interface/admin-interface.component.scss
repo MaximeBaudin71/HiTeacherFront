@@ -1,0 +1,125 @@
+.my-form {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-group {
+    margin-bottom: 10px;
+  }
+  
+  .label {
+    font-weight: bold;
+  }
+  
+  .input, .select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .input:focus, .select:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  .submit-button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .submit-button:hover {
+    background-color: #0056b3;
+  }
+
+  .todolist{
+    display: flex;
+    flex-direction: column; /* Pour aligner les éléments verticalement */
+    justify-content: center; /* Pour aligner les éléments verticalement */
+    align-items: center; /* Pour aligner les éléments horizontalement */
+
+    h2 {
+      font-size: 24px;
+      text-align: center;
+      margin-top: 25px;
+    }
+
+
+  }
+  
+
+  .ajout-element-sequence{
+    display: flex;
+    flex-direction: column; /* Pour aligner les éléments verticalement */
+    justify-content: center; /* Pour aligner les éléments verticalement */
+    align-items: center; /* Pour aligner les éléments horizontalement */
+
+  }
+
+  .all-elements{
+
+    h2{
+      font-size: 24px;
+      text-align: center;
+      margin-top: 25px;
+    }
+
+    table {
+      width: 100%; /* Pour occuper toute la largeur du conteneur */
+      border-collapse: collapse; /* Pour fusionner les bordures des cellules */
+      font-family: Arial, sans-serif; /* Choisir une police de caractères */
+    }
+    
+    th, td {
+      border: 1px solid #dddddd; /* Ajouter des bordures aux cellules */
+      text-align: left; /* Aligner le texte à gauche */
+      padding: 8px; /* Ajouter un espace autour du contenu */
+    }
+    
+    th {
+      background-color: #f2f2f2; /* Couleur de fond pour les en-têtes */
+    }
+    
+    tr:nth-child(even) {
+      background-color: #f2f2f2; /* Couleur de fond pour les lignes paires */
+    }
+    
+    /* Styliser les cases à cocher */
+    input[type="checkbox"] {
+      transform: scale(1.5); /* Agrandir la case à cocher */
+      margin: 0; /* Réduire la marge autour de la case à cocher */
+    }
+    
+    /* Appliquer des styles personnalisés en fonction de la visibilité */
+    tr[hidden="true"] {
+      display: none; /* Masquer les lignes avec [hidden="true"] */
+    }
+    
+    /* Ajouter un style de survol pour les lignes */
+    tr:hover {
+      background-color: #d9d9d9; /* Couleur de fond au survol */
+    }
+    
+    /* Media Query pour rendre la grille responsive */
+    @media (max-width: 768px) {
+      th, td {
+        padding: 5px;
+        font-size: 12px;
+      }
+
+      button {
+        padding: 3px 6px;
+        font-size: 10px;
+      }
+
+    }
+  }

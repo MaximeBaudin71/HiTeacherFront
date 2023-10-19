@@ -1,0 +1,85 @@
+<app-dashboard></app-dashboard>
+
+<!-- <div class="todolist">
+  <h2> Ma liste de tâche</h2>
+  <app-todo-list></app-todo-list>
+</div> -->
+
+
+<div class="ajout-element-sequence">
+<h2> Ajouter un nouvel élément</h2>
+<!-- element-sequence-form.component.html -->
+<form (submit)="submitForm()" class="my-form">
+    <div class="form-group">
+      <label for="title">Titre:</label>
+      <input type="text" id="title" name="title" [(ngModel)]="newElementSequence.title" required>
+    </div>
+    <div class="form-group">
+      <label for="lien">Lien:</label>
+      <input type="text" id="lien" name="lien" [(ngModel)]="newElementSequence.lien" required>
+    </div>
+    <div class="form-group">
+      <label for="imageUrl">URL de l'image:</label>
+      <input type="text" id="imageUrl" name="imageUrl" [(ngModel)]="newElementSequence.imageUrl" required>
+    </div>
+    <!-- <div class="form-group">
+      <label for="imageFile">Télécharger une image:</label>
+      <input type="file" id="imageFile" name="imageFile" (change)="onFileSelected($event)" required>
+    </div> -->
+    <div class="form-group">
+      <label for="createdDate">Date de création:</label>
+      <input type="date" id="createdDate" name="createdDate" [(ngModel)]="newElementSequence.createdDate" required>
+    </div>
+    <div class="form-group">
+      <label for="niveau">Niveau:</label>
+      <select id="niveau" name="niveau" [(ngModel)]="newElementSequence.niveau" required>
+        <option value="sixieme">Sixieme</option>
+        <option value="cinquieme">Cinquieme</option>
+        <option value="quatrieme">Quatrieme</option>
+        <option value="troisieme">Troisieme</option>
+        <option value="segpa">SEGPA</option>
+        <option value="espacegame">Escape Game/Genialy</option>
+      </select>
+    </div>
+    <button type="submit">Créer un élément de séquence</button>
+  </form>
+</div>
+
+<div class="all-elements">
+  <h2> Tous mes éléments </h2>
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>Titre</th>
+        <th>Créé le</th>
+        <th>Niveau</th>
+        <th>Est visible ?</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let element of elementSequences">
+        <td>
+          <button [routerLink]="['/element-update', element.id]">Modifier</button>
+
+        </td>
+        <td>{{ element.title }}</td>
+        <td>{{ element.createdDate  | date:'dd/MM/yyyy' }}</td>
+        <td>{{ element.niveau }}</td>
+        <td>
+          <input type="checkbox" [(ngModel)]="element.isVisible" (change)="toggleVisibility(element)">
+        </td>
+        <td>
+          <button (click)="deleteElement(element)">
+            Supprimer
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
+</div>
+
+
+  

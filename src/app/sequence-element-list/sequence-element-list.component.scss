@@ -1,0 +1,19 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes de largeur égale */
+    grid-gap: 10px; /* Espace entre les éléments */
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr; /* Une colonne sur les écrans étroits (mobile) */
+    }
+  }
+
+  .app-single-sequence-element {
+    /* Styles par défaut pour les éléments dans la grille */
+  
+    @media (max-width: 768px) {
+      /* Styles spécifiques pour les écrans mobiles */
+      width: 100%; /* Élargissez les composants pour remplir la largeur de l'écran mobile */
+      /* Autres styles mobiles (marges, rembourrage, etc.) */
+    }
+  }
